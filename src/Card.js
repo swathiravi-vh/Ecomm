@@ -1,4 +1,4 @@
-function Card() {
+function Card({product,addToCart}) {
   return (
      <div className="col-lg-4 border mt-2 p-2">
               <div className="row">
@@ -9,9 +9,11 @@ function Card() {
                   />
                 </div>
                 <div className="col-lg-12">
-                  <h3>Title</h3>
-                  <h6>Price RS300</h6>
-                  <button className="btn btn-sm btn-primary">
+                  <h3>{product.name}</h3>
+                  <h6>Price RS{product.price}</h6>
+                  <button onClick={() => {
+                    addToCart(product)
+                  }} className="btn btn-sm btn-primary">
                     Add to Cart
                   </button>
                 </div>
