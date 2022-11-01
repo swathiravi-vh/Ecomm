@@ -5,7 +5,7 @@ function Card({product,addToCart}) {
                 <div className="col-lg-12">
                   <img
                     className="img-fluid"
-                    src="https://picsum.photos/500/300"
+                    src={product.img}
                   />
                 </div>
                 <div className="col-lg-12">
